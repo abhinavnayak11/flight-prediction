@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Prediction App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <nav class="nav main-nav">
+        <ul>
+            <li><a href="/">Flight Fare Prediction</a></li>
+            <li style="float:right"><a href="https://github.com/abhinavnayak11" target="_blank">GitHub</a></li>
+            <li style="float:right"><a href="https://www.linkedin.com/in/abhinavnayak" target="_blank">Abhinav Nayak</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="text">
+            <h1 class="heading">Flight Fare Prediction App</h1>
+            <h3>Predict fare of your next flight</h3>
+        </div>
+        <div class="form">
+            <form action="#" method="post">
+                <div class="airline" >
+                    <label>Airline</label>
+                    <select name="airline" id="airline" required="required">
+                        <option value="Jet Airways">Jet Airways</option>
+                        <option value="IndiGo">IndiGo</option>
+                        <option value="Air India">Air India</option>
+                        <option value="Multiple carriers">Multiple carriers</option>
+                        <option value="SpiceJet">SpiceJet</option>
+                        <option value="Vistara">Vistara</option>
+                        <option value="Air Asia">Air Asia</option>
+                        <option value="GoAir">GoAir</option>
+                    </select>
+                </div>
+                <div class="source" >
+                    <label>Departure City</label>
+                    <select onchange="fn1()" name="source" id="source"  required="required">
+                        <option value="item0">--select a place--</option>
+                        <option value="Banglore">Bangalore</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+                </div>
+                <div class="destination" >
+                    <label>Arrival City</label>
+                    <select name="destination" id="destination" required="required">
+                        <option value="">-- select from first --</option>
+                    </select>
+                </div>
+                <div class="date">
+                    <label>Departure Date</label>
+                    <input type="date" name="dep_date" required="required" />
+                </div>
+                <div class="time">
+                    <label>Departure Time</label>
+                    <input type="time" name="dep_time" required="required" />
+                </div>
+                <button>submit</button>
+            </form>
+            <hr>
+            <div class="predict-text">
+                {% for text in print_this %}
+                    <p>Flight fare with {{ text[0] }} stops is <span>&#x20b9; {{ text[1] }}</span></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='scripts.js')}}"></script>
+</body>
+</html>
