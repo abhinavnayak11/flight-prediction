@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from flask_ngrok import run_with_ngrok
 import joblib
 import re
 import numpy as np
@@ -7,7 +6,6 @@ import numpy as np
 from datetime import datetime
 
 app = Flask(__name__)
-run_with_ngrok(app)
 
 model = joblib.load('files/model1.pkl')
 mappings = joblib.load('files/mappings1.pkl')
