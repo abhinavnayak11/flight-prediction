@@ -19,6 +19,3 @@ function fn1()
     }
 }
 
-
-var today = new Date().toISOString().split('T')[0];
-document.getElementsByName("dep_date")[0].setAttribute('min', today);
