@@ -25,6 +25,13 @@ def api():
     destination = request.form['destination']
     dep_date= request.form['dep_date']
     dep_time = request.form['dep_time']
+    
+    form_values = {}
+    form_values['airline'] = airline
+    form_values['source'] = source
+    form_values['destination'] = destination
+    form_values['dep_date'] = dep_date
+    form_values['dep_time'] = dep_time
     # stops = request.form['stops']
 
     # convert to form understandable by ML model
@@ -60,7 +67,7 @@ def api():
     # departure time : {dep_time} | departure hour {dep_hour} | departure min : {dep_min}
     # '''
 
-    return render_template('api.html', print_this = texts)
+    return render_template('api.html', print_this = texts, form_values = form_values)
 
 if __name__ == '__main__':
   app.run()
