@@ -25,14 +25,15 @@
                 <div class="airline" >
                     <label>Airline</label>
                     <select name="airline" id="airline" required="required">
-                        <option value="Jet Airways">Jet Airways</option>
-                        <option value="IndiGo">IndiGo</option>
-                        <option value="Air India">Air India</option>
-                        <option value="Multiple carriers">Multiple carriers</option>
-                        <option value="SpiceJet">SpiceJet</option>
-                        <option value="Vistara">Vistara</option>
-                        <option value="Air Asia">Air Asia</option>
-                        <option value="GoAir">GoAir</option>
+                        <option value="item0" hidden>--select an airline--</option>
+                        <option value="Jet Airways" {% if form_values['airline'] == "Jet Airways" %} selected {% endif %}>Jet Airways</option>
+                        <option value="IndiGo" {% if form_values['airline'] == "IndiGo" %} selected {% endif %}>IndiGo</option>
+                        <option value="Air India" {% if form_values['airline'] == "Air India" %} selected {% endif %}>Air India</option>
+                        <option value="Multiple carriers" {% if form_values['airline'] == "Multiple carriers" %} selected {% endif %}>Multiple carriers</option>
+                        <option value="SpiceJet" {% if form_values['airline'] == "SpiceJet" %} selected {% endif %}>SpiceJet</option>
+                        <option value="Vistara" {% if form_values['airline'] == "Vistara" %} selected {% endif %}>Vistara</option>
+                        <option value="Air Asia" {% if form_values['airline'] == "Air Asia" %} selected {% endif %}>Air Asia</option>
+                        <option value="GoAir" {% if form_values['airline'] == "GoAir" %} selected {% endif %}>GoAir</option>
                     </select>
                 </div>
                 <div class="source" >
@@ -54,11 +55,11 @@
                 </div>
                 <div class="date">
                     <label>Departure Date</label>
-                    <input type="date" name="dep_date" required="required" />
+                    <input type="date" name="dep_date" required="required" value="{{ form_values['dep_date'] }}"/>
                 </div>
                 <div class="time">
                     <label>Departure Time</label>
-                    <input type="time" name="dep_time" required="required" />
+                    <input type="time" name="dep_time" required="required" value="{{ form_values['dep_time'] }}"/>
                 </div>
                 <button>submit</button>
             </form>
