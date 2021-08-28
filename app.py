@@ -17,7 +17,8 @@ mappings = joblib.load('files/mappings1.pkl')
 @app.route('/', methods = ['GET', 'POST'])
 def api():
   if request.method == 'GET':
-    return render_template('api.html')
+    form_values = None
+    return render_template('api_new.html', form_values = form_values)
   else:
     row = []
     airline = request.form['airline']
