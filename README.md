@@ -40,7 +40,7 @@ _This [repo](https://github.com/analyticsindiamagazine/MachineHack/tree/master/H
 ├── static
 │   ├── scripts.js
 │   |__ styles.css
-├── template
+├── templates
 │   ├── api.html
 ├── Procfile
 ├── README.md
