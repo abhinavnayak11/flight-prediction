@@ -27,7 +27,7 @@ _This [repo](https://github.com/analyticsindiamagazine/MachineHack/tree/master/H
 1. **Data Collection** : The flight dataset was taken from Machine Hack flight fare prediction hackathon. You can find the dataset [here](https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh). It is important to note here, the dataset has flight details for 4 months (from March 2019 to June 2019) only. 
 2. **Data Cleaning & EDA** : The dataset is cleaned by handling null values, checking data types, removing outliers. Exploratory data analysis helped discover patterns in data. New features are created and unnecessary features are removed. Explained in this [notebook](https://github.com/abhinavnayak11/flight-prediction/blob/main/notebooks/Data_Cleaning.ipynb)
 3. **Model training** : Dataset is prepared by encoding categorical data. Different Machine learning algorithms are trained on this dataset using the wonderful scikit-learn library. The best performing model was catboost. It was further optimized with Hyperparameter tuning and saved using joblib. Explained in this [notebook](https://github.com/abhinavnayak11/flight-prediction/blob/main/notebooks/Modelling.ipynb). The final model has a r2 score of 0.8593965. There is [scope](#future-scope) for improvement here.
-4. **Deployment** : Flask web framework in python was used to create the web application. Input data from the user is encoded (the encoding used in training is saved) and then fed into the model to predict result. Flask code in `app.py`. Encoders and model are saved in `files` folder. Webpage HTML is present in `templates` folder and styling and scripts are in `static` folder. After testing locally the project is deployed in Heroku.
+4. **Deployment** : Flask web framework in python was used to create the web application. Input data from the user is encoded (the encoding used in training is saved) and then fed into the model to predict the result. Flask code in `app.py`. Encoders and model are saved in `files` folder. Webpage HTML is present in `templates` folder and styling and scripts are in `static` folder. After testing locally the project is deployed in Heroku.
 
 ## [Project Structure](#table-of-content)
 ```
@@ -64,5 +64,5 @@ _This [repo](https://github.com/analyticsindiamagazine/MachineHack/tree/master/H
 ## [Future Scope](#table-of-content)
 - The dataset used has flight details of only 4 months. Collection of more data spanning across years can help in better prediction
 - Exploratory data analysis is never done enough. More analysis can present us with unseen patterns. 
-- Currently, 6 new features are created. Even more features can be created here. Some of them include the distance between cities, Longitude & Latitude of a city. Feature engineering along with proper feature selection methods will help the model performance
+- Currently, 6 new features are created. More features can be created here. Some of them include the distance between cities, Longitude & Latitude of a city. Feature engineering along with proper feature selection methods will help the model performance
 - Various ensembling methods can be used to increase the model performance.
