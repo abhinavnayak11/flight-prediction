@@ -49,3 +49,14 @@ _This [repo](https://github.com/analyticsindiamagazine/MachineHack/tree/master/H
 ```
 
 ## Installation
+1. Install [Python](https://www.python.org/downloads/) & [git](https://git-scm.com/downloads)
+2. (_You can skip this step_) Create virtual environment for this project. With virtual environement it is easier to maintain packages for each project. Tutorials : [Windows](https://www.youtube.com/watch?v=APOPm01BVrk) | [Mac&Linux](https://www.youtube.com/watch?v=Kg1Yvry_Ydk)
+3. Create a new folder `project` locally
+4. Open cmd and type `cd path/to/project`
+5. `git clone https://github.com/abhinavnayak11/flight-prediction.git .` : This will clone this project repo into `project` folder locally
+6. (_You can skip this step_) Activate the virtual environment.
+7. `pip install -r requirements.txt` : This will install all the required libraries
+8. `cd path/to/project`
+9. `python -m app` : This will run the flask app
+10. Navigate to `http://127.0.0.1:5000/` : Flask app in served here
+11. To deploy in Heroku follow this [tutorial](https://www.youtube.com/watch?v=mrExsjcvF4o)
